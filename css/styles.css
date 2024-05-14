@@ -1,0 +1,182 @@
+body {
+    background-color: white;
+}
+
+.body__silver {
+    background-color: #d0d0d0;
+}
+
+.body__gold {
+    background-color: #ecc553;
+}
+
+.body__black {
+    background-color: rgb(19, 18, 18);
+}
+
+.text__black {
+    color: white;
+}
+
+.espacio {
+    height: 300px;
+}
+
+.cont {
+    background-color: #14ce7d;
+    max-width: 1800px;
+    box-shadow: 5px 5px 5px 2px #154732;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: calc(3% - 25px);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.navbar .dropdown-menu img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav__titulo {
+    color: white;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+    font-size: 6rem; /* Cambia el tamaño de la fuente según tus preferencias */
+    text-decoration: none; /* Quita la línea de abajo por defecto */
+    text-shadow: 2px 2px  black;
+}
+
+.navbar {
+    background-color: #14ce7d;
+}
+.membresia {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.membresia__tittle {
+    color: #154732;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+    font-size: 1.8rem; /* Cambia el tamaño de la fuente según tus preferencias */
+    margin-bottom: 1rem;
+}
+
+.img-container {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Hace la animación más lenta */
+}
+
+.img-container:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño al 120% en hover */
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+    box-shadow: 3px 0px 5px 2px black;
+}
+
+.membresia__description {
+    max-width: 900px; /* Ajusta el ancho máximo de la descripción */
+    margin: 0 auto; /* Centra horizontalmente el texto */
+    margin-bottom: 2rem;
+    color: white;
+} 
+
+.enlace__mem {
+    color: white;
+}
+
+.enlace__mem:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.flecha__mem{
+    width: 6%;
+}
+
+.titulo__nav {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav__menu {
+    font-size: 1.5rem;
+}
+
+.formulario-blanc {
+    background-color: #ddd4d4;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.boton-rosado {
+    border-color: #1C8056;
+    background-color: #1C8056;
+    color: black;
+}
+
+.bg-image {
+    background-image: url('../img/Mauritius.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg-image::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor alfa para ajustar la opacidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.letra__l{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px  black;
+}
+
+.letra__h{
+    font-size: 4rem;
+    text-shadow: 2px 2px  black;
+}
+
+.palabra__hotels{
+    font-size: 1rem;
+    text-shadow: 2px 2px  black;
+}
+
+.enlace__hamb {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.568);
+    font-size: 2rem;
+}
+
+.enlace__hamb:hover{
+    text-decoration: none;
+    color: rgb(241, 232, 232);
+}
+
+.h2__footer {
+    font-size: 1.5rem;
+}

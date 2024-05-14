@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <title>Gimnasio</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left-image,
+      .right-image {
+        background-size: cover;
+        background-position: center;
+        flex: 2;
+      }
+
+      .left-image {
+        background-image: url("img/gym.jpg");
+        height: 90vh;
+        margin: 10px;
+      }
+
+      .right-image {
+        background-image: url("img/gym1.png");
+        height: 70vh;
+      }
+
+      .center-text {
+        flex: 2;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
+
+      .text {
+        max-width: 500px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .text__ {
+        animation: appearFromRight 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      .titulo {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        animation: appearFromLeft 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      .btn {
+        margin-top: 2rem;
+        display: inline-block;
+        padding: 20px 30px;
+        background-color: #14ce7d;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      @keyframes appearFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes appearFromRight {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .left-image,
+        .right-image {
+          flex: none;
+          height: 30vh;
+          max-width: 100%;
+        }
+
+        .center-text {
+          flex: none;
+          height: 40vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-image"></div>
+      <div class="center-text">
+        <div class="text">
+          <h1 class="titulo">Gimnasio</h1>
+          <p class="text__">
+            Nuestro gimnasio de alta gama combina tecnología avanzada con el
+            encanto del entorno isleño. Las ventanas panorámicas te ofrecen
+            vistas espectaculares de la playa y el océano, creando un ambiente
+            inspirador para tus entrenamientos. <br /><br />
+            Está equipado con equipos de fitness de última generación, ofrecemos
+            programas de entrenamiento personalizados diseñados por expertos en
+            salud y fitness. Los huéspedes pueden disfrutar de clases dirigidas
+            por instructores altamente cualificados, que van desde yoga hasta
+            entrenamiento de alta intensidad.
+          </p>
+          <a href="#" class="btn">Más información</a>
+        </div>
+      </div>
+      <div class="right-image"></div>
+    </div>
+  </body>
+</html>

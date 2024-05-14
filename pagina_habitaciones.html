@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .card {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-img-top {
+            transition: transform 0.5s;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #14ce7d;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Habitaciones</h1>
+        
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Heavenly Beach</h5>
+            <div class="card-body">
+                <h5 class="card-title">Suite Familiar</h5>
+                <p class="card-text">Se trata de unas suites bien equipadas, un poco más alejadas del hotel, aportando privacidad a las familias, parejas o individuos. Tiene una capacidad para máximo de 6 personas, con 4 habitaciones, 3 equipadas con camas y 1 baño grande. También tiene piscina climatizada y un sendero que les lleva directamente a la playa.</p>
+                <p class="card-text"><img src="img/habitacion1.jpg" alt="Heavenly Beach" style="max-width: 275px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion1_1.jpg" alt="Heavenly Beach" style="max-width: 400px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Family Paradise Suite</h5>
+            <div class="card-body">
+                <h5 class="card-title">Suite Familiar</h5>
+                <p class="card-text">Esta espectacular habitación de nuestro hotel, es una suite que consta de 2 habitaciones, entre las que se encuentra esta para los más pequeños de la casa, y el baño. En la habitación principal, la cual es muy amplia, se encuentra el resto de útiles de la habitación, tales como la cama grande, minibar, escritorio, un pequeño saloncito conectado, tv de pantalla plana y demás.</p>
+                <p class="card-text"><img src="img/habitacion2.jpg" alt="Family Paradise Suite" style="max-width: 250px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion2_2.jpg" alt="Family Paradise Suite" style="max-width: 230px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion2_1.jpg" alt="Family Paradise Suite" style="max-width: 400px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Coconut Cove</h5>
+            <div class="card-body">
+                <h5 class="card-title">Habitación Familiar</h5>
+                <p class="card-text">Esta habitación familiar es un perfecto espacio conectado para la familia. Es un espacio con una sola habitación donde se encuentra el baño. Está la cama de matrimonio, y en el lado opuesto se encuentran las literas, que pueden ser de dos o 4 camas, dependiendo de las personas que la ocupen.</p>
+                <p class="card-text"><img src="img/habitacion3.jpg" alt="Family Paradise Suite" style="max-width: 250px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion3_1.jpg" alt="Family Paradise Suite" style="max-width: 250px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion3_2.jpg" alt="Family Paradise Suite" style="max-width: 350px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Single Angel</h5>
+            <div class="card-body">
+                <h5 class="card-title">Habitación Individual</h5>
+                <p class="card-text">Es un espacio acogedor y privado donde las personas que vengan solas puedan descansar como en su casa. El espacio está repartido de manera que se sientan cómodos. Consta de un pequeño espacio que es tomado como el baño, donde se encuentra la bañera, la cual también hace función de ducha.</p>
+                <p class="card-text"><img src="img/habitacion4.jpg" alt="Family Paradise Suite" style="max-width: 260px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion4_1.jpg" alt="Family Paradise Suite" style="max-width: 250px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion4_2.jpg" alt="Family Paradise Suite" style="max-width: 190px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Love Core</h5>
+            <div class="card-body">
+                <h5 class="card-title">Habitación Nupcial</h5>
+                <p class="card-text">Esta encantadora habitación para parejas tiene todo lo necesario para enamorar. Un oasis privado donde conecta una cama matrimonial con un jacuzzi con vistas al mar, y una habitación a parte para el baño.</p>
+                <p class="card-text"><img src="img/habitacion5.jpg" alt="Heavenly Beach" style="max-width: 275px; margin-right: 35px;" class="card-img-top"><img src="img/habitacion5_1.jpg" alt="Heavenly Beach" style="max-width: 500px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Double Heaven</h5>
+            <div class="card-body">
+                <h5 class="card-title">Habitación Doble</h5>
+                <p class="card-text">Esta habitación, decorada con elementos simples que expresan tranquilidad y armonía, es un oasis de paz para dos personas.</p>
+                <p class="card-text"><img src="img/habitacion6.jpg" alt="Heavenly Beach" style="max-width: 280px; margin-right: 35px;" class="card-img-top"><img src="img/habitacion6_1.jpg" alt="Heavenly Beach" style="max-width: 200px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Total Paradise</h5>
+            <div class="card-body">
+                <h5 class="card-title">Habitación Triple/Cuádruple</h5>
+                <p class="card-text">Total paradise es un conjunto de habitaciones cuádruples y triples (están separadas, pero tienen el mismo nombre).</p>
+                <p class="card-text"><img src="img/habitacion7.jpg" alt="Family Paradise Suite" style="max-width: 200px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion7_1.jpg" alt="Family Paradise Suite" style="max-width: 300px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion7_2.jpg" alt="Family Paradise Suite" style="max-width: 230px; margin-right: 25px;" class="card-img-top"><img src="img/habitacion7_3.jpg" alt="Family Paradise Suite" style="max-width: 160px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+
+        <div class="card mb-4 visible-card">
+            <h5 class="card-header">Sweet Junior Heaven</h5>
+            <div class="card-body">
+                <h5 class="card-title">Suite Junior</h5>
+                <p class="card-text">Esta habitación es un oasis de paz, gracias a la armonía de colores y muebles, estableciendo un ambiente tranquilo que ayuda al descanso de quién rente estas habitaciones.</p>
+                <p class="card-text"><img src="img/habitacion8.jpg" alt="Heavenly Beach" style="max-width: 300px; margin-right: 35px;" class="card-img-top"><img src="img/habitacion8_1.jpg" alt="Heavenly Beach" style="max-width: 300px;" class="card-img-top"></p>
+                <a href="#" class="btn">Reservar</a>
+                <a href="#" class="btn">Ver tarifas</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página adicional con información detallada sobre las habitaciones -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Detalles de las habitaciones</h2>
+        <p>Aquí puedes encontrar información detallada sobre cada tipo de habitación ofrecida por nuestro hotel.</p>
+        <ul>
+            <li><a href="#">Heavenly Beach</a></li>
+            <li><a href="#">Family Paradise Suite</a></li>
+            <li><a href="#">Coconut Cove</a></li>
+            <li><a href="#">Single Angel</a></li>
+            <li><a href="#">Love Core</a></li>
+            <li><a href="#">Double Heaven</a></li>
+            <li><a href="#">Total Paradise</a></li>
+            <li><a href="#">Sweet Junior Heaven</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Agregar clase 'show' a las tarjetas cuando se hacen visibles en la ventana
+        window.addEventListener('scroll', reveal);
+        
+        function reveal() {
+            var reveals = document.querySelectorAll('.visible-card');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 50;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

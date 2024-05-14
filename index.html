@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-wF4s8kxegwLQYtvFkMqZOrJLjUi60rmaKkhFgXvzvRwY+rwD+QrxBCKw2OFTK31BZkmGIfpXByBv0aXv8JGobQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Leafy Heaven</title>
+    <style>
+      .bg-image {
+        background-image: url("img/imagen1.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 100vh; /* Altura del viewport */
+      }
+
+      .bg-image::before {
+        content: "";
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Cambia el valor alfa para ajustar la opacidad */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .full-height {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Navbar transparente */
+      .navbar-transparent {
+        background-color: transparent !important;
+      }
+
+      /* Navbar normal */
+      .navbar-normal {
+        background-color: #14ce7d !important; /* Cambia el color al que quieras */
+      }
+
+      /* Estilo para el título */
+      .titulo-principal {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+
+      /* Estilo para el botón llámanos */
+      .llamanos-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .llamanos-btn:hover {
+        background-color: #fff;
+        color: #14ce7d;
+        text-decoration: none;
+      }
+
+      /* Estilo para las líneas de la lista del footer */
+      .footer-item::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #18724b;
+        top: -5px;
+        left: 0;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+
+      .footer-item:hover::before {
+        width: 100%;
+        left: 0;
+      }
+
+      /* Animaciones */
+      @keyframes slideInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideOutUp {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+      }
+
+      .introduccion-texto {
+        animation: slideInUp 1s ease-out;
+      }
+
+      .introduccion-texto.oculto {
+        animation: slideOutUp 1s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-container {
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .logo-container.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <span class="letra__l">L</span> <span class="letra__h">H</span
+          ><span class="palabra__hotels">Hotels</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-around"
+          id="navbarNav"
+        >
+          <a href="menu.html" class="enlace__hamb"
+            ><span class="menu__tittle"
+              >Menú
+              <img
+                src="img/hamburguesa.png"
+                alt="hamburguesa"
+                class="img-fluid"
+                style="max-width: 2rem" /></span
+          ></a>
+          <div class="formulario-blanc">
+            <form class="form-inline my-2 my-lg-0 mx-auto">
+              <input
+                class="form-control mr-sm-2"
+                type="date"
+                placeholder="Entrada"
+                aria-label="Entrada"
+              />
+              <input
+                class="form-control mr-sm-2"
+                type="date"
+                placeholder="Salida"
+                aria-label="Salida"
+              />
+              <input
+                class="form-control mr-sm-2"
+                type="number"
+                placeholder="Personas"
+                aria-label="Personas"
+              />
+              <input
+                class="form-control mr-sm-2"
+                type="text"
+                placeholder="Código de descuento"
+                aria-label="Código de descuento"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0 boton-rosado"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle honk-font"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="img/idioma.png"
+                  alt=""
+                  class="img-fluid"
+                  style="max-height: 2.2rem"
+                />
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"
+                  ><img
+                    src="img/España.png"
+                    alt="Spain Flag"
+                    class="img-fluid"
+                  />Español</a
+                >
+                <a class="dropdown-item" href="#"
+                  ><img
+                    src="img/UK.png"
+                    alt="Germany Flag"
+                    class="img-fluid"
+                  />Inglés</a
+                >
+                <a class="dropdown-item" href="#"
+                  ><img
+                    src="img/Francia.svg"
+                    alt="France Flag"
+                    class="img-fluid"
+                  />Francés</a
+                >
+                <a class="dropdown-item" href="#"
+                  ><img
+                    src="img/Alemania.png"
+                    alt="Germany Flag"
+                    class="img-fluid"
+                  />Alemán</a
+                >
+                <!-- Agrega más países según sea necesario -->
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link honk-font membresia" href="membresia.html"
+                >Membresía</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Título -->
+    <div class="container-fluid py-3 bg-image full-height">
+      <div class="row">
+        <div class="col-12 text-white text-center">
+          <h1 class="nav__titulo">LEAFY HEAVEN</h1>
+        </div>
+      </div>
+      <!-- Botón "Llámanos" -->
+      <a class="llamanos-btn" href="#">Llámanos</a>
+    </div>
+
+    <!-- Introducción -->
+    <div
+      class="container text-center mt-5 introduccion-texto"
+      style="background-color: #154732; color: white; padding: 30px"
+    >
+      <h2>Sumérgete en la serenidad y la belleza de “Leafy Heaven”</h2>
+      <br />
+      <p>
+        Un oasis de tranquilidad en la vibrante costa, donde cada rincón de
+        nuestras instalaciones cuenta una historia de felicidad. Con una
+        ubicación privilegiada en una playa de ensueño como lo es las Islas
+        Mauricio, nuestro encantador establecimiento hotelero se crea como un
+        refugio para aquellos que buscan escapar del bullicio de la vida
+        cotidiana y sumergirse en la calma y comodidad de un entorno familiar.
+      </p>
+    </div>
+
+    <div class="espacio"></div>
+
+    <!-- LOGOS 1 -->
+<div class="p-5 overflow-hidden d-flex gap-5 flex-column flex-md-row justify-content-center align-items-center border-top border-dark">
+    <!-- Proveedores -->
+    <div class="d-flex flex-column">
+      <h3 class="text-center">Proveedores:</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor1.png"
+              alt="logo proveedor 1"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor2.png"
+              alt="logo proveedor 2"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor3.png"
+              alt="logo proveedor 3"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor4.png"
+              alt="logo proveedor 4"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor5.png"
+              alt="logo proveedor 5"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor6.png"
+              alt="logo proveedor 6"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-4 col-sm-2 logo-container">
+            <img
+              src="img/Proveedor7.png"
+              alt="logo proveedor 7"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Influencers -->
+    <div class="d-flex flex-column">
+      <h3 class="text-center">Influencers:</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 col-sm-1 logo-container">
+            <img
+              src="img/influencer1.png"
+              alt="logo influencer 1"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-3 col-sm-1 logo-container">
+            <img
+              src="img/influencer2.png"
+              alt="logo influencer 2"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-3 col-sm-1 logo-container">
+            <img
+              src="img/influencer3.png"
+              alt="logo influencer 3"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-12 col-md-3 col-sm-1 logo-container">
+            <img
+              src="img/influencer4.png"
+              alt="logo influencer 4"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- LOGOS 2 -->
+  <div class="p-5 overflow-hidden d-flex gap-5 flex-column flex-md-row justify-content-center align-items-center">
+    <!-- Colaboradores -->
+    <div class="d-flex flex-column">
+      <h3 class="text-center">Colaboradores:</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores1.png"
+              alt="logo confiteria diego vazquez"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores2.png"
+              alt="logo cafés mocaibo"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores3.png"
+              alt="logo patrocinador 3"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores4.png"
+              alt="logo patrocinador 4"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores5.png"
+              alt="logo patrocinador 5"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores6.png"
+              alt="logo patrocinador 6"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+          <div class="col-6 col-md-3 col-sm-2 logo-container">
+            <img
+              src="img/colaboradores7.png"
+              alt="logo patrocinador 7"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      const logos = document.querySelectorAll('.logo-container');
+      const triggerBottom = window.innerHeight * 0.8;
+
+      logos.forEach(logo => {
+        const logoTop = logo.getBoundingClientRect().top;
+
+        if (logoTop < triggerBottom) {
+          logo.classList.add('active');
+        } else {
+          logo.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+    <!-- FOOTER -->
+    <footer class="p-5" style="background-color: #9eecc5">
+      <div class="container">
+        <div class="row">
+          <!-- FAQ -->
+          <div class="col-md-4">
+            <h2 class="h2__footer footer-item">FAQ</h2>
+            <p>Aquí resolveremos todas tus dudas</p>
+          </div>
+          <!-- Contacto -->
+          <div class="col-md-4">
+            <h2 class="h2__footer footer-item">Contacto</h2>
+            <p>Teléfono: +34 393 19 75 52</p>
+            <p>Email: info@hotelleafyheaven.com</p>
+          </div>
+          <!-- Horarios -->
+          <div class="col-md-4">
+            <h2 class="h2__footer footer-item">Reservas</h2>
+            <p>Teléfono: +34 393 19 77 21</p>
+            <p>reservas@hotelleafyheaven.com</p>
+          </div>
+        </div>
+        <!-- REDES SOCIALES -->
+        <div class="row">
+          <div class="col-md-4">
+            <hr />
+            <h2 class="h2__footer">Redes Sociales</h2>
+            <a href="#"
+              ><img
+                src="img/Twitter.png"
+                alt="Twitter"
+                style="width: 30px; height: auto; margin-right: 10px"
+            /></a>
+            <a href="#"
+              ><img
+                src="img/Instagram.webp"
+                alt="Instagram"
+                style="width: 30px; height: auto; margin-right: 10px"
+            /></a>
+            <a href="#"
+              ><img
+                src="img/Gmail.png"
+                alt="Gmail"
+                style="width: 30px; height: auto"
+            /></a>
+          </div>
+          <div class="col-md-4">
+            <hr />
+            <h2 class="h2__footer">Dirección</h2>
+            <p>Calle Real, Playa de Pereybere</p>
+          </div>
+          <div class="col-md-4">
+            <hr />
+            <h2 class="h2__footer">Horarios</h2>
+            <p>Lunes - Viernes: 9:00am - 6:00pm</p>
+            <p>Sábado: 9:00am - 2:00pm</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h4 id="foot" class="text-center mt-4">&copy; 2020-2024 Leafy Heaven</h4>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
+          $(".navbar")
+            .removeClass("navbar-transparent")
+            .addClass("navbar-normal");
+        } else {
+          $(".navbar")
+            .removeClass("navbar-normal")
+            .addClass("navbar-transparent");
+        }
+      });
+
+      $(document).ready(function () {
+        // Añade smooth scrolling a todos los enlaces dentro de la navbar
+        $(".navbar a").on("click", function (event) {
+          // Asegúrate de que this.hash tenga un valor antes de anular el comportamiento predeterminado
+          if (this.hash !== "") {
+            // Previene el comportamiento de clic de anclaje predeterminado
+            event.preventDefault();
+            // Almacena el hash
+            var hash = this.hash;
+            // Usa el método animate() de jQuery para agregar desplazamiento de página suave
+            // El número opcional (800) especifica el número de milisegundos que tarda en desplazarse a la zona
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Agrega hash (#) a la URL cuando haya terminado de desplazarse (comportamiento de clic predeterminado)
+                window.location.hash = hash;
+              }
+            );
+          } // Fin if
+        });
+
+        // Cambia la opacidad de la barra de navegación después de un tiempo definido
+        var navbar = $(".navbar");
+        var scrolled = false;
+
+        $(window).scroll(function () {
+          if (!scrolled) {
+            setTimeout(function () {
+              if ($(window).scrollTop() > 50) {
+                navbar
+                  .removeClass("navbar-transparent")
+                  .addClass("navbar-normal");
+              } else {
+                navbar
+                  .removeClass("navbar-normal")
+                  .addClass("navbar-transparent");
+              }
+              scrolled = true;
+            }, 1000); // Tiempo en milisegundos antes de que se ejecute
+          }
+        });
+
+        // Ocultar texto de introducción al hacer scroll hacia abajo
+        var lastScrollTop = 0;
+        $(window).scroll(function (event) {
+          var st = $(this).scrollTop();
+          if (st > lastScrollTop) {
+            $(".introduccion-texto").addClass("oculto");
+          } else {
+            $(".introduccion-texto").removeClass("oculto");
+          }
+          lastScrollTop = st;
+        });
+      });
+    </script>
+  </body>
+</html>

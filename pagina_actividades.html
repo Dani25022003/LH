@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <title>Actividades Exteriores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .card {
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 2s, opacity 3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #14ce7d;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Actividades Exteriores</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/ParqueAcuatico.png" class="card-img-top" alt="Deportes Acuáticos">
+                    <div class="card-body">
+                        <h2 class="card-title">Deportes acuáticos</h2>
+                        <p class="card-text">El hotel proporciona equipos para actividades de snorkeling, buceo, surf, paddle boarding, kayak y jet ski.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/Barco.jpg" class="card-img-top" alt="Excursiones en Barco">
+                    <div class="card-body">
+                        <h2 class="card-title">Excursiones en barco</h2>
+                        <p class="card-text">Ofrecemos excursiones en barco para que los huéspedes puedan explorar los alrededores de la isla, visitar otras islas cercanas, además los huéspedes pueden disfrutar de avistamiento de ballenas y ver las preciosas puestas del sol en el mar.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/Senderismo.jpg" class="card-img-top" alt="Senderismo y Caminatas">
+                    <div class="card-body">
+                        <h2 class="card-title">Senderismo y caminatas</h2>
+                        <p class="card-text">Guiar a los huéspedes en caminatas por senderos naturales para explorar la flora y fauna local.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/ActividadPlaya.jpg" class="card-img-top" alt="Actividades en la Playa">
+                    <div class="card-body">
+                        <h2 class="card-title">Actividades en la playa</h2>
+                        <p class="card-text">Nos encargamos de organizar fiestas temáticas en la playa, con música en vivo, barbacoas, cócteles tropicales y actividades divertidas como limbo o concurso de baile.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center mb-5 mt-5">Para niños</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/clubinfantil.jpg" class="card-img-top" alt="Club Infantil en la Playa">
+                    <div class="card-body">
+                        <h3 class="card-title">Club infantil en la playa</h3>
+                        <p class="card-text">Tenemos organizado un club infantil en la playa, donde los niños pueden participar en actividades supervisadas por personal capacitado, realizan juegos en la playa, manualidades y búsquedas del tesoro en la arena.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/Cine.jpg" class="card-img-top" alt="Club Infantil en la Playa">
+                    <div class="card-body">
+                        <h3 class="card-title">Noches de cine en la playa</h3>
+                        <p class="card-text">Ofrecemos proyecciones de películas familiares en una pantalla grande en la playa, donde los niños pueden disfrutar acostados en una colchoneta con palomitas y refrescos.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/Lectura.png" class="card-img-top" alt="Club Infantil en la Playa">
+                    <div class="card-body">
+                        <h3 class="card-title">Club de lectura y actividades</h3>
+                        <p class="card-text">Tenemos una sala aparte dentro del hotel la cual es una ludoteca para entretener a los niños. Esta ludoteca ofrece una amplia variedad de juegos de mesa, rompecabezas y actividades interactivas para niños de todas las edades. Además, cuenta con una selección de libros infantiles y cómodos rincones de lectura para los más pequeños. El ambiente es relajado y acogedor, con personal disponible para organizar torneos, actividades grupales y sesiones de manualidades para todas las edades.</p>
+                        <a href="#" class="btn">Reservar</a>
+                        <a href="tarifas.html" class="btn">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            });
+        };
+    </script>
+</body>
+</html>
