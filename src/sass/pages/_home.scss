@@ -1,0 +1,32 @@
+// Estilos para la página de inicio
+.bg-image {
+    background-image: url('../../img/imagen1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh; // Altura del viewport
+  
+    &::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5); // Cambia el valor alfa para ajustar la opacidad
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  
+  .full-height {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Estilo para el título principal
+  .nav__titulo {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  

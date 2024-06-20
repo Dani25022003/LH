@@ -1,0 +1,24 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+footer {
+    background-color: lighten(v.$primary-color, 20%);
+    .footer-item {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: v.$secondary-color;
+        top: -5px;
+        left: 0;
+        @include m.transition(width 0.3s ease, left 0.3s ease);
+      }
+      &:hover:before {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+  

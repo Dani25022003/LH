@@ -1,0 +1,81 @@
+// Estilos para body con clase body__silver
+.body__silver {
+    background-color: $background-silver;
+}
+
+// Estilos para body con clase body__gold
+.body__gold {
+    background-color: $background-gold;
+}
+
+// Estilos para body con clase body__black
+.body__black {
+    background-color: $background-black;
+    color: white; // Color de texto blanco
+}
+
+// Estilos para el contenedor principal
+.cont {
+    background-color: #14ce7d;
+    max-width: 1800px;
+    box-shadow: 5px 5px 5px 2px #154732;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+}
+
+// Estilos para el texto de la membresía
+.membresia {
+    color: white;
+    font-size: 1.6rem;
+}
+
+// Estilos para el título de la membresía
+.membresia__title {
+    color: #154732;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif; // Cambia la fuente si lo prefieres
+    font-size: 1.8rem; // Tamaño de fuente del título
+    margin-bottom: 1rem;
+}
+
+// Estilos para el contenedor de imágenes
+.img-container {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s; // Transición de transformación más lenta
+}
+
+// Efecto de escala en hover para las imágenes
+.img-container:hover img {
+    transform: scale(1.1); // Aumenta al 110% en hover
+}
+
+// Estilos para las imágenes dentro del contenedor
+.img-container img {
+    width: 100%;
+    max-width: 500px; // Tamaño máximo de las imágenes
+    height: auto;
+    box-shadow: 3px 0px 5px 2px black;
+}
+
+// Estilos para la descripción de la membresía
+.membresia__description {
+    max-width: 900px; // Ancho máximo de la descripción
+    margin: 0 auto; // Centrado horizontal
+    margin-bottom: 2rem;
+    color: white;
+}
+
+// Estilos para los enlaces de la membresía
+.enlace__mem {
+    color: white;
+    &:hover {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+// Estilos para la flecha de la membresía
+.flecha__mem {
+    width: 6%;
+}

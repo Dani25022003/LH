@@ -1,0 +1,123 @@
+body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-image,
+    .right-image {
+      background-size: cover;
+      background-position: center;
+      flex: 2;
+    }
+
+    .left-image {
+      background-image: url("../../img/ParqueAcuatico.png");
+      height: 50vh;
+      margin: 10px;
+    }
+
+    .right-image {
+      background-image: url("../../img/Sand Dunes Resort and Suites in Myrtle Beach.jpg");
+      height: 80vh;
+      margin: 10px;
+    }
+
+    .center-text {
+      flex: 2;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      flex-direction: column; /* Añadido para asegurar que el texto esté en columna */
+    }
+
+    .text {
+      max-width: 500px;
+      font-size: 20px;
+      color: #333;
+      text-align: center; /* Añadido para centrar el texto */
+      padding: 0 20px; /* Añadido para dar espaciado al texto */
+    }
+
+    .text__ {
+      animation: appearFromLeft 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem; /* Reducido el margen inferior */
+      animation: appearFromRight 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 20px 30px;
+      background-color: #14ce7d;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    @keyframes appearFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes appearFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+  
+        .left-image,
+        .right-image {
+          flex: none;
+          height: 40vh;
+          width: 100%; /* Añadido para asegurar que la imagen ocupe todo el ancho */
+        }
+  
+        .center-text {
+          padding: 20px;
+          text-align: center; /* Añadido para alinear el texto a la izquierda */
+        }
+  
+        .titulo {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+      }

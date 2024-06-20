@@ -1,0 +1,40 @@
+// Variables de colores
+$primary-color: #14ce7d;
+$secondary-color: #18724b;
+$background-color: #9eecc5;
+$text-color: #ffffff;
+
+// Estilos generales
+body {
+  font-family: 'Arial', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h1, h2, h3 {
+  color: $secondary-color;
+}
+
+.footer-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: $secondary-color;
+    top: -5px;
+    left: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+    left: 0;
+  }
+}
+
+h2.h2__footer {
+  color: $secondary-color;
+}

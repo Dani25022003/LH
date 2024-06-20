@@ -1,0 +1,37 @@
+.navbar-transparent {
+    background-color: transparent;
+  }
+  
+  .navbar-normal {
+    background-color: #14ce7d; // Cambia el color al que quieras
+  }
+  
+  .navbar {
+    transition: background-color 0.5s ease;
+  }
+  
+  .navbar a {
+    transition: all 0.3s ease;
+  
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  
+  // Estilo para el menú hamburguesa
+  .enlace__hamb {
+    .menu__tittle {
+      font-size: 1.2rem; // Tamaño de la fuente ajustado
+      color: rgba(255, 255, 255, 0.8); // Color blanco con opacidad
+    }
+  }
+  
+  // Dropdown items
+  .dropdown-item {
+    img {
+      max-width: 30px; // Ajusta el tamaño máximo de las banderas
+      height: auto;    // Mantiene la proporción automáticamente
+    }
+  }
+  

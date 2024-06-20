@@ -1,0 +1,86 @@
+body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* Cambio a columna en dispositivos móviles */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .left-image,
+    .right-image {
+      background-size: cover;
+      background-position: center;
+      flex: none; /* Para que no crezcan en dispositivos móviles */
+      width: 100%; /* Ocupan el ancho completo */
+      height: 30vh; /* Altura reducida para dispositivos móviles */
+      margin: 10px 0; /* Espaciado entre imágenes */
+    }
+
+    .center-text {
+      text-align: center;
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    .titulo {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .text__ {
+      animation: appearFromRight 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 20px 30px;
+      background-color: #14ce7d;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    @keyframes appearFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (min-width: 769px) {
+      /* Estilos para pantallas más grandes */
+      .container {
+        flex-direction: row;
+      }
+
+      .left-image,
+      .right-image {
+        flex: 2; /* Vuelven a tener flexibilidad en pantallas más grandes */
+        height: 90vh;
+      }
+
+      .center-text {
+        flex: 2;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }

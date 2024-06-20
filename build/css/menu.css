@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../../img/imagen2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .fondo-negro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor alpha para cambiar la opacidad */
+    pointer-events: none; /* Esta línea permite que los clics pasen a través de la capa */
+  }
+  .boton {
+    margin: 20px;
+    padding: 10px 50px;
+    font-size: 2.4rem;
+    background-color: #1C8056;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 2px 2px 2px #104b32;
+  }
+  .grupo-botones {
+    display: flex;
+    /* Añadido: Flex-direction column para dispositivos móviles */
+    flex-direction: column;
+    align-items: center; /* Alineación al centro vertical en dispositivos móviles */
+  }
+
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .boton {
+      width: 80%; /* Ancho del botón ajustado para dispositivos móviles */
+    }
+
+    .grupo-botones {
+      flex-direction: column; /* Cambio a dirección columna para dispositivos móviles */
+    }
+  }

@@ -10,151 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/bootstrap-icons.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-wF4s8kxegwLQYtvFkMqZOrJLjUi60rmaKkhFgXvzvRwY+rwD+QrxBCKw2OFTK31BZkmGIfpXByBv0aXv8JGobQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="build/css/main.min.css" />
     <title>Leafy Heaven</title>
-    <style>
-      .bg-image {
-        background-image: url("img/imagen1.jpg");
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        height: 100vh; /* Altura del viewport */
-      }
-
-      .bg-image::before {
-        content: "";
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Cambia el valor alfa para ajustar la opacidad */
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .full-height {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Navbar transparente */
-      .navbar-transparent {
-        background-color: transparent !important;
-      }
-
-      /* Navbar normal */
-      .navbar-normal {
-        background-color: #14ce7d !important; /* Cambia el color al que quieras */
-      }
-
-      /* Estilo para el título */
-      .titulo-principal {
-        font-size: 4rem;
-        font-weight: bold;
-      }
-
-      /* Estilo para el botón llámanos */
-      .llamanos-btn {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        background-color: transparent;
-        border: 2px solid #fff;
-        color: #fff;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-      }
-
-      .llamanos-btn:hover {
-        background-color: #fff;
-        color: #14ce7d;
-        text-decoration: none;
-      }
-
-      /* Estilo para las líneas de la lista del footer */
-      .footer-item::before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: #18724b;
-        top: -5px;
-        left: 0;
-        transition: width 0.3s ease, left 0.3s ease;
-      }
-
-      .footer-item:hover::before {
-        width: 100%;
-        left: 0;
-      }
-
-      /* Animaciones */
-      @keyframes slideInUp {
-        from {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideOutUp {
-        from {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        to {
-          transform: translateY(-50px);
-          opacity: 0;
-        }
-      }
-
-      .introduccion-texto {
-        animation: slideInUp 1s ease-out;
-      }
-
-      .introduccion-texto.oculto {
-        animation: slideOutUp 1s ease-out;
-        animation-fill-mode: forwards;
-      }
-
-      @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .logo-container {
-      opacity: 0;
-      transform: translateY(-50px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .logo-container.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -181,7 +38,7 @@
           class="collapse navbar-collapse justify-content-around"
           id="navbarNav"
         >
-          <a href="menu.html" class="enlace__hamb"
+          <a href="pages/menu.html" class="enlace__hamb"
             ><span class="menu__tittle"
               >Menú
               <img
@@ -275,7 +132,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link honk-font membresia" href="membresia.html"
+              <a class="nav-link honk-font membresia" href="pages/membresia.html"
                 >Membresía</a
               >
             </li>
